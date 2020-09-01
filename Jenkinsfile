@@ -26,5 +26,10 @@ pipeline{
                 }
             }
         }
+		stage('Setup Kubectl Context') {
+            steps{
+					sh 'kubectl config use-context arn:aws:eks:us-east-1:148224597888:cluster/capstone'
+            }
+        }
 	}
 }
