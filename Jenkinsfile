@@ -33,8 +33,6 @@ pipeline{
 						aws eks --region us-east-1 update-kubeconfig --name capstone
                         kubectl config use-context arn:aws:eks:us-east-1:148224597888:cluster/capstone
 					'''
-
-            }
         }
 	}
 }
