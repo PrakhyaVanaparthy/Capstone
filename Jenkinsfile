@@ -39,6 +39,12 @@ pipeline{
 					sh 'kubectl apply -f ./blue-container.json'
                 }
 			}
+		stage('Green Container') {
+            	steps{
+					withAWS(region:'us-east-1',credentials:'AWS-Capstone') {
+					sh 'kubectl apply -f ./green-container.json'
+                }
+			}
 		}
 	}
 }
