@@ -28,8 +28,8 @@ pipeline{
         }
 		stage('Setup Kubectl Context') {
             steps{
-					withAWS(region:'us-east-1',credentials:'AWS-Capstone') {
-                    			sh 'aws eks update-kubeconfig --name capstone'
+					withAWS(region:'us-east-1',credentials:'AWS-Credentials') {
+                    sh 'aws eks update-kubeconfig --name capstone'
 					sh 'kubectl config use-context arn:aws:eks:us-east-1:148224597888:cluster/capstone'
                 }
 			}
