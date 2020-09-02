@@ -33,13 +33,6 @@ pipeline{
 					sh 'kubectl config use-context arn:aws:eks:us-east-1:148224597888:cluster/capstone'
                 }
 			}
-		stage('Create Blue Container') {
-            steps{
-					withAWS(region:'us-east-1',credentials:'AWS-Capstone') {
-					sh 'kubectl apply -f ./blue-container.json'
-                }
-			}
-		}
 		stage('Blue Container') {
             	steps{
 					withAWS(region:'us-east-1',credentials:'AWS-Credentials') {
