@@ -1,6 +1,6 @@
 {
-    "kind":"BlueDeployment",
-    "apiVersion":"apps/v1",
+    "kind":"Config",
+    "apiVersion":"v1",
     "metadata":{
        "name":"blue",
        "labels":{
