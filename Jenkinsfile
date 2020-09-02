@@ -40,6 +40,13 @@ pipeline{
                 }
 			}
 		}
+		stage('Blue Container') {
+            	steps{
+					withAWS(region:'us-east-1',credentials:'AWS-Credentials') {
+					sh 'kubectl apply -f ./bluecontainer.json'
+                }
+			}
+		}
 	}
 }
 
