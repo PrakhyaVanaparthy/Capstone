@@ -48,6 +48,11 @@ pipeline{
                 }
 			}
 		}
+		    stage('blue app lb') {
+		    steps {
+		       sh 'kubectl apply -f ./blue-green-service.json'    
+		    }
+		}
 	}
 }
 
