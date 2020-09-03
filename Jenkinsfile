@@ -50,7 +50,8 @@ pipeline{
 		}
 		    stage('blue app lb') {
 		    steps {
-		       sh 'kubectl apply -f ./blue-green-service.json'    
+			    withAWS(region:'us-east-1',credentials:'AWS-Capstone'){
+				    sh 'kubectl apply -f ./blue-green-service.json'  }  
 		    }
 		}
 	}
