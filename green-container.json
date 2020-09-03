@@ -24,7 +24,7 @@
             "containers":[
                {
                   "name":"green",
-                  "image":"prakhyavanaparthy/capstoneproject1:latest",
+                  "image":"prakhyavanaparthy/capstoneproject2:latest",
                   "ports":[
                      {
                         "name":"green-server",
